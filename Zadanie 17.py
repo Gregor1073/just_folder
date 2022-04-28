@@ -13,20 +13,21 @@ for i in range(lliter):
 print("\n", *pole)
 
 
-while len(live)<5 or "_" not in pole :   
+while len(live)<5:   
     strzal=input("\nPodaj literę którą chcesz strzelić ")
     if strzal in wylosowane : 
         for i in range(lliter) :
             if wylosowane[i] == strzal:
                 pole[i]=strzal 
-                print(*pole)   
                 traf.append(1)
+        print(*pole)   
     else :
         print("nietrafiłeś")
         live.append(1)
         print(*pole)
 
-if "_" not in pole:
-    print("Odgadłeś całe słowo!!! Gratulacje")
-else :
-    print(f"Niestety skończyły ci się zycia. Twoje słowo to {wylosowane} ")
+    if "_" not in pole:
+        print("Odgadłeś całe słowo!!! Gratulacje")
+        exit()
+
+print(f"Niestety skończyły ci się zycia. Twoje słowo to {wylosowane} ")
