@@ -1,7 +1,4 @@
-
-
 przesuniecie=int(input("O ile chcesz przesunąć swój tekst?\n"))
-
 
 def szyfruj(txt):
     zaszyfrowny = ""
